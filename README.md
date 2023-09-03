@@ -56,12 +56,12 @@ Extra Functionalities (Optional for advanced implementations):
 
 1. **Clone the repo**:
     ```bash
-    git clone <https://github.com/Leovhernandez/To-Do-List>
+    git clone https://github.com/Leovhernandez/To-Do-List
     ```
 
 2. **Navigate to the project directory**:
     ```bash
-    cd <To-Do-List>
+    cd To-Do-List
     ```
 
 3. **Build Docker images**:
@@ -84,7 +84,7 @@ Extra Functionalities (Optional for advanced implementations):
     ```
 
 ## Contributors
-[Leonardo Hernandez]
+Leonardo Hernandez
 
 ## License
 This project is licensed under the MIT License - see the (LICENSE.md) file for details
