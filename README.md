@@ -61,13 +61,13 @@ Extra Functionalities (Optional for advanced implementations):
 
 2. **Navigate to the project directory**:
     ```bash
-    cd <Leovhernandez/To-Do-List>
+    cd <To-Do-List>
     ```
 
 3. **Build Docker images**:
     ```bash
-    docker build -t to-do-list/backend -f Dockerfile-backend ./backend
-    docker build -t to-do-list/frontend -f Dockerfile-frontend ./frontend
+    docker build -t to-do-list/backend -f Dockerfile-backend .
+    docker build -t to-do-list/frontend -f Dockerfile-frontend .
     ```
 
 4. **Push Docker images**:
