@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: your_image_name/backend:latest
+        image: to-do-list-backend/backend:latest
         ports:
         - containerPort: 5000
 ---
@@ -30,3 +30,32 @@ spec:
     port: 80
     targetPort: 5000
   type: LoadBalancer
+  
+---
+  apiVersion: v1
+  kind: Pod
+  metadata:
+    name: To-Do-List
+    labels:
+      name: To-Do-List
+  spec:
+    containers:
+    - name: backend
+      image: to-do-list-backend/backend:latest
+      env:
+        - name: DB_NAME
+          valueFrom:
+            secretKeyRef:
+              name: db-credentials
+              key: DB_NAME
+        - name: DB_USER
+          valueFrom:
+            secretKeyRef:
+              name: db-credentials
+              key: DB_USER
+        - name: DB_PASSWORD
+          valueFrom:
+          secretKeyRef:
+            name: db-credentials
+            key: DB_PASSWORD
+  
